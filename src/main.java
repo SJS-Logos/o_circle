@@ -26,9 +26,7 @@ class Circle {
   }
 
   void drawCircle(int x, int y) {
-    noFill();
-    stroke(255, 255, 255, fade);
-    strokeWeight(strokeWeight);
+    update();
     circle(x, y, radius);
   }
 }
@@ -47,11 +45,19 @@ void setup() {
 
 void draw() {
   background(0);
-  circle1.update();
-  circle2.update();
-  circle3.update();
-
+  
+  stroke(0);
+  strokeWeight(10);
+  noFill();
   circle1.drawCircle(width / 2, height / 2);
+  
+  noFill();
+  stroke(255,255,255,fade);
+  strokeWeight(5);
   circle2.drawCircle(width / 2, height / 2);
+  
+  noFill();
+  stroke(255,255,255,fade);
+  strokeWeight(5);
   circle3.drawCircle(width / 2, height / 2);
 }
